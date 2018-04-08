@@ -513,6 +513,14 @@ versioned, automated and portable. This in turn allows others not only
 to easily reproduce experiments but also to build upon the work of 
 others.
 
+**Acknowledgements**: This work was partially funded by the Center for 
+Research in Open Source Software[^cross], Better Scientific Software 
+Fellowship[^bssw], Sandia National Laboratories, NSF Award #1450488 
+and DOE Award #DE-SC0016074.
+
+[^cross]: http://cross.ucsc.edu
+[^bssw]: http://bssw.io
+
 
 # References {.unnumbered}
 
