@@ -1,0 +1,16 @@
+metadata: {}
+pipelines:
+  co2-emissions:
+    envs:
+    - host
+    path: pipelines/co2-emissions
+    stages:
+    - setup
+    - run
+    - validate
+  paper:
+    envs:
+    - host
+    path: paper
+    stages:
+    - build
