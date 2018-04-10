@@ -1,16 +1,7 @@
 ---
 title: "Popperize It! Improving The Sustainability of Scholarly 
-Articles By Systematically Following DevOps Practices"
-author:
-- name: Ivo Jimenez
-  affiliation: UC Santa Cruz
-  email: ivo.jimenez@ucsc.edu
-- name: Michael Sevilla
-  affiliation: UC Santa Cruz
-  email: msevilla@ucsc.edu
-- name: Carlos Maltzahn
-  affiliation: UC Santa Cruz
-  email: carlosm@ucsc.edu
+Articles By Systematically Following OSS and DevOps Practices"
+author: 'Ivo Jimenez, Michael Sevilla, Carlos Maltzahn (UC Santa Cruz)'
 ---
 
 Currently, approaches to scientific research require activities that 
@@ -20,10 +11,15 @@ countless hours reformatting data and writing code to attempt to
 reproduce previously published research. What if the scientific 
 community could find a better way to create and publish our workflows, 
 data, and models to minimize the amount of the time spent “reinventing 
-the wheel”? Popper [@jimenez_popper_2017 ; @jimenez_standing_2017] is 
+the wheel”? Popper [@jimenez_standing_2016 ; @jimenez_popper_2017] is 
 a protocol and CLI tool for implementing scientific exploration 
 pipelines following a DevOps approach that allows researchers to 
-generate scholarly work that is easy to reproduce.
+generate scholarly work that is easy to reproduce. In this whitepaper 
+we introduce Popper and show how can be used to follow OSS and DevOps practices 
+with the goal of producing articles (and associated code) that are accessible and 
+easily re-runnable.
+
+# Popper Pipelines: A DevOps Approach to Implementing Experimentation Pipelines
 
 Over the last decade, software engineering and systems administration 
 communities (also referred to as DevOps) have developed sophisticated 
@@ -40,8 +36,6 @@ leveraging continuing improvements to these tools and services. Rather
 than mandating a particular set of tools, the convention only expects 
 components of an experiment to be scripted.
 
-# Popper Pipelines: A DevOps Approach to Implementing Experimentation Pipelines
-
 A common generic analysis/experimentation workflow involving a 
 computational component is the one shown below. We refer to this as a 
 pipeline in order to abstract from experiments, simulations, analysis 
@@ -52,32 +46,34 @@ implementation and documentation of a scientific exploration is
 commonly done in an ad-hoc way (custom bash scripts, storing in local 
 archives, etc.).
 
-The idea behind Popper is simple: make an article self-contained by 
-including in a code repository the manuscript along with every 
-experiment's scripts, inputs, parametrization, results and validation. 
-To this end we propose leveraging state-of-the-art technologies and 
-applying a DevOps approach to the implementation of scientific 
-pipelines (also referred to 
-[SciOps](https://en.wikipedia.org/wiki/DevOps#Scientific_DevOps_(SciOps))).
-
-> **DevOps**: **TODO** add definition. In practice, this means 
-> creating versioned, portable pipelines.
-
 ![A generic experimentation workflow (modified from the one presented 
-in [@last_practice_2017].
+in [@kitzes_practice_2017].
 ](figures/experimentation-workflow.pdf)
 
 The idea behind Popper is simple: make an article self-contained by 
 including in a code repository the manuscript along with every 
 experiment's scripts, inputs, parametrization, results and validation. 
 To this end we propose leveraging state-of-the-art technologies and 
-applying a DevOps approach to the implementation of scientific 
+applying a DevOps[^devops] approach to the implementation of scientific 
 pipelines (also referred to 
 [SciOps](https://en.wikipedia.org/wiki/DevOps#Scientific_DevOps_(SciOps))).
 
+[^devops]: According to [Wikipedia](https://en.wikipedia.org/wiki/DevOps), 
+DevOps, a clipped compound of "development" and "operations", is a 
+software engineering culture and practice that aims at unifying 
+software development (Dev) and software operation (Ops). The main 
+characteristic of the DevOps movement is to strongly advocate 
+automation and monitoring at all steps of software construction, from 
+integration, testing, releasing to deployment and infrastructure 
+management. DevOps aims at shorter development cycles, increased 
+deployment frequency, more dependable releases, in close alignment 
+with business objectives. In practice, following DevOps practices 
+means creating versioned, portable experimentation pipelines by 
+scripting all the steps using automation (DevOps) tools.
+
 ![DevOps approach to implementing scientific exploration pipelines, 
 also referred to as SciOps.
-](/figures/workflow_devops.png)
+](figures/experimentation-workflow-devops.pdf)
 
 Popper is a convention (or protocol) that maps the implementation of a 
 pipeline to software engineering (and DevOps/SciOps) best practices 
@@ -529,4 +525,3 @@ and DOE Award #DE-SC0016074.
 \setlength{\parindent}{-0.18in}
 \setlength{\leftskip}{0.2in}
 \setlength{\parskip}{0.5pt}
-\fontsize{7pt}{8pt}\selectfont
